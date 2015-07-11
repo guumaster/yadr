@@ -1,0 +1,35 @@
+{
+  "name": "yadr",
+  "version": "1.0.0",
+  "description": "Yet Another Dice Roller",
+  "repository": "https://github.com/guumaster/yadr.git",
+  "main": "dist/yadr.js",
+  "bin": {
+    "yadr": "./build/cli.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.6",
+    "http-server": "^0.8.0",
+    "parallelshell": "^1.2.0",
+    "uglifyify": "^3.0.1",
+    "watch": "^0.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watch 'npm run build' lib --wait=2",
+    "build": "npm run build:browser && npm run build:cli",
+    "build:browser": "browserify lib/browser.js -o dist/yadr.js -t babelify -t uglifyify -s yadr ",
+    "build:cli": "babel -d build lib",
+    "devserver": "watch 'http-server dist' lib --wait=2"
+  },
+  "keywords": [
+    "dice",
+    "roll",
+    "dnd"
+  ],
+  "author": "Guumaster <guuweb@gmail.com> (http://github.com/guumaster)",
+  "license": "ISC"
+}
