@@ -6,7 +6,7 @@
     "guumaster <guuweb@gmail.com>"
   ],
   "description": "yet another dice roller",
-  "main": "lib/browser.js",
+  "main": "dist/yadr.js",
   "keywords": [
     "dice",
     "roll",
