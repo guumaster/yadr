@@ -21,10 +21,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watch 'npm run build' lib --wait=2",
     "build": "npm run build:browser && npm run build:cli",
-    "build:browser": "browserify lib/browser.js -o dist/yadr.js -t babelify -t uglifyify -s yadr ",
+    "build:browser": "./node_modules/.bin/browserify lib/browser.js -o dist/yadr.js -t babelify -t uglifyify -s yadr ",
     "build:cli": "babel -d build lib",
-    "devserver": "watch 'http-server dist' lib --wait=2",
-    "postinstall": "npm run build"
+    "devserver": "watch 'http-server dist' lib --wait=2"
   },
   "keywords": [
     "dice",
