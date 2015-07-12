@@ -1,0 +1,23 @@
+{
+  "name": "yadr",
+  "version": "1.0.0",
+  "homepage": "https://github.com/guumaster/yadr",
+  "authors": [
+    "guumaster <guuweb@gmail.com>"
+  ],
+  "description": "yet another dice roller",
+  "main": "lib/browser.js",
+  "keywords": [
+    "dice",
+    "roll",
+    "dnd"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
