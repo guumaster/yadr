@@ -25,8 +25,16 @@ $> yadr best 2 of 4d10
 
 ### In the browser 
 
+First install with `bower`: 
+
+```
+$> bower install yadr
+```
+
+Then include it in your html file: 
+
 ``` 
-<script src="yadr.js"></script>
+<script src="bower_components/dist/yadr.js"></script>
 <script>
 console.log(yadr('4d6-1+3'));
 </script>
