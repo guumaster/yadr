@@ -23,7 +23,8 @@
     "build": "npm run build:browser && npm run build:cli",
     "build:browser": "browserify lib/browser.js -o dist/yadr.js -t babelify -t uglifyify -s yadr ",
     "build:cli": "babel -d build lib",
-    "devserver": "watch 'http-server dist' lib --wait=2"
+    "devserver": "watch 'http-server dist' lib --wait=2",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "dice",
