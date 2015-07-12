@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Yet Another Dice Roller",
   "repository": "https://github.com/guumaster/yadr.git",
-  "main": "dist/yadr.js",
+  "main": "./build/cli.js",
   "bin": {
     "yadr": "./build/cli.js"
   },
