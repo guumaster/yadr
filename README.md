@@ -15,11 +15,12 @@ npm install [-g] yadr
 ### As a system command
 
 ```
-$> yadr 3d6
-//=> 6 from 3d6. [ from (2,1,3)]
+$> yadr best 1 from 2d20 +1
+//=> best 1 from 2d20 +1: rolled [11,6] taking [11] +1 = 12
+
 
 $> yadr best 2 of 4d10
-//=> 18 from 4d10. [ best 2 (10,8) from (10,6,7,8)]
+//=> best 2 of 4d10: rolled [8,2,8,6] taking [8,8]  = 16
 
 ```
 
@@ -36,6 +37,11 @@ Then include it in your html file:
 ``` 
 <script src="bower_components/dist/yadr.js"></script>
 <script>
-console.log(yadr('4d6-1+3'));
+    var roll4d6 = yadr().roll('4d6+1').make(function(result) {
+        console.log('from: ', result.input, 'rolled: ', result.rolls, ' = ', result.total);
+    });
+
+    roll4d6(); // from:  4d6+1 rolled:  Array [ 4, 3, 6, 4 ]  =  18
+    roll4d6(); // from:  4d6+1 rolled:  Array [ 1, 6, 5, 5 ]  =  18
 </script>
 ```

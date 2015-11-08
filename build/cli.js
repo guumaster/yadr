@@ -15,8 +15,11 @@ if (!expr) {
   process.exit();
 }
 
+//=> 6 from 3d6. [ from (2,1,3)]
 try {
-  console.log((0, _yadr2['default'])().roll(expr).run());
+  (0, _yadr2['default'])().roll(expr).run(function (result) {
+    console.log(result.input + ': rolled [' + result.rolls + '] ' + (result.taken ? 'taking [' + result.taken + ']' : '') + ' ' + (result.mod ? '' + result.sign + result.mod : '') + ' = ' + result.total);
+  });
 } catch (e) {
   console.error(e);
 }
