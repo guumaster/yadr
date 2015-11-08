@@ -1,4 +1,10 @@
-import { roller } from '../lib/yadr';
+import yadr from '../lib/yadr';
+
+const roller = yadr()
+  .make(function(result) {
+    console.log(`${result.input}: rolled [${result.rolls}] ${result.taken?`taking [${result.taken}]`: ''} ${result.mod?`${result.mod>=0?'+':''}${result.mod}`: ''} = ${result.total}`);
+    return result.total;
+  });
 
 console.log(roller('4d6-1+3'));
 console.log(roller('worst 1 of 3d6+1'));

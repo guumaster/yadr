@@ -78,4 +78,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 
+build/*
 dist/*

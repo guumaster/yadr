@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./yadr').roller;
+module.exports = require('./yadr');

@@ -26,8 +26,11 @@
     "devserver": "watch 'http-server dist' lib --wait=2"
   },
   "keywords": [
+    "fluent",
     "dice",
+    "roller",
     "roll",
+    "d20",
     "dnd"
   ],
   "author": "Guumaster <guuweb@gmail.com> (http://github.com/guumaster)",
