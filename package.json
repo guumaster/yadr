@@ -3,9 +3,12 @@
   "version": "2.0.1",
   "description": "Yet Another Dice Roller",
   "repository": "https://github.com/guumaster/yadr.git",
-  "main": "./build/cli.js",
+  "main": "./lib/yadr.js",
   "bin": {
-    "yadr": "./build/cli.js"
+    "yadr": "./lib/cli.js"
+  },
+  "engines": {
+    "node": ">=6.1"
   },
   "dependencies": {},
   "devDependencies": {
@@ -20,9 +23,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watch 'npm run build' lib --wait=2",
-    "build": "npm run build:browser && npm run build:cli",
+    "build": "npm run build:browser",
     "build:browser": "./node_modules/.bin/browserify lib/browser.js -o dist/yadr.js -t babelify -t uglifyify -s yadr ",
-    "build:cli": "babel -d build lib",
     "devserver": "watch 'http-server dist' lib --wait=2"
   },
   "keywords": [

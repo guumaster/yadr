@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-import yadr from '../lib/yadr';
+const yadr = require(  '../lib/yadr' )
 
 let roller = yadr()
   .roll('5d6')
@@ -9,9 +9,9 @@ let roller = yadr()
   .plus(1)
   //.minus(1)
   .make(function(result) {
-    console.log(`${result.input}: rolled [${result.rolls}] ${result.taken?`taking [${result.taken}]`: ''} ${result.mod?`${result.sign}${result.mod}`: ''} = ${result.total}`);
-    return result.total;
-  });
+    console.log(`${result.input}: rolled [${result.rolls}] ${result.taken?`taking [${result.taken}]`: ''} ${result.mod?`${result.sign}${result.mod}`: ''} = ${result.total}`)
+    return result.total
+  })
 
 console.log('new char: ', {
   str: roller(),
@@ -19,7 +19,7 @@ console.log('new char: ', {
   int: roller(),
   wiz: roller(),
   chr: roller()
-});
+})
 
 yadr({debug:true})
   .roll('2d20')
@@ -28,6 +28,6 @@ yadr({debug:true})
   .plus(1)
   //.minus(1)
   .run(function(result) {
-    console.log(`${result.input}: rolled [${result.rolls}] ${result.taken?`taking [${result.taken}]`: ''} ${result.mod?`${result.sign}${result.mod}`: ''} = ${result.total}`);
-    return result.total;
-  });
+    console.log(`${result.input}: rolled [${result.rolls}] ${result.taken?`taking [${result.taken}]`: ''} ${result.mod?`${result.sign}${result.mod}`: ''} = ${result.total}`)
+    return result.total
+  })
