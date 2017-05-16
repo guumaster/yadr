@@ -1,3 +1,6 @@
+
+# **_DEPRECATED_** in favor of [@guumaster/rpgen](https://github.com/guumaster/rpgen)
+
 # Yet Another Dice Roller (yadr)
 
 ## Description 
